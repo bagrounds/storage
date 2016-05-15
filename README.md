@@ -1,4 +1,4 @@
-# serve-function-module-template
+# storage
 
 [![GitHub Downloads][github-img]][github-url]
 [![Travis-CI][travis-img]][travis-url]
@@ -6,16 +6,16 @@
 [![Code Climate][codeclimate-img]][codeclimate-url]
 [![Code Climate][codeclimate-issues-img]][codeclimate-issues-url]
 
-Template for a module that will work with serve-function
+A simple storage module backed by redis.
 
 ## Installation
 
 ``` bash
-  $ npm install 'github:bagrounds/serve-function-module-template'
+  $ npm install 'github:bagrounds/storage'
 ```
 
 ## Usage
-Clone the module and replace example code.
+...
 
 
 ## Run Tests
@@ -23,17 +23,17 @@ Clone the module and replace example code.
   $ npm test
 ```
 
-[github-img]: https://img.shields.io/github/downloads/bagrounds/serve-function-module-template/total.svg
-[github-url]: https://github.com/bagrounds/serve-function-module-template
+[github-img]: https://img.shields.io/github/downloads/bagrounds/storage/total.svg
+[github-url]: https://github.com/bagrounds/storage
 
-[travis-img]: https://img.shields.io/travis/bagrounds/serve-function-module-template/master.svg
-[travis-url]: https://travis-ci.org/bagrounds/serve-function-module-template
+[travis-img]: https://img.shields.io/travis/bagrounds/storage/master.svg
+[travis-url]: https://travis-ci.org/bagrounds/storage
 
-[coveralls-img]: https://coveralls.io/repos/github/bagrounds/learner/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/github/bagrounds/learner?branch=master
+[coveralls-img]: https://coveralls.io/repos/github/bagrounds/storage/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/bagrounds/storage?branch=master
 
-[codeclimate-img]: https://codeclimate.com/github/bagrounds/serve-function-module-template/badges/gpa.svg
-[codeclimate-url]: https://codeclimate.com/github/bagrounds/serve-function-module-template
+[codeclimate-img]: https://codeclimate.com/github/bagrounds/storage/badges/gpa.svg
+[codeclimate-url]: https://codeclimate.com/github/bagrounds/storage
 
-[codeclimate-issues-img]: https://codeclimate.com/github/bagrounds/serve-function-module-template/badges/issue_count.svg
-[codeclimate-issues-url]: https://codeclimate.com/github/bagrounds/serve-function-module-template/issues
+[codeclimate-issues-img]: https://codeclimate.com/github/bagrounds/storage/badges/issue_count.svg
+[codeclimate-issues-url]: https://codeclimate.com/github/bagrounds/storage/issues
