@@ -77,6 +77,7 @@
    * @property {String} [value] the value to set
    * @property {String} [host] host other than the default
    * @property {Number} [port] port other than the default
+   * @property {Boolean} [test] use a fake redis client
    */
 
   /**
@@ -184,6 +185,11 @@
         host: options.host,
         port: options.port
       };
+    }
+
+    if(options.test){
+
+      var redis = require('fakeredis');
     }
 
     return redis.createClient(redisOptions);

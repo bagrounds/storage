@@ -23,7 +23,8 @@
 
       options = {
         key: 'a key',
-        value: 'a value'
+        value: 'a value',
+        test: true
       };
     });
 

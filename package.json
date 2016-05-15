@@ -1,6 +1,6 @@
 {
   "name": "storage",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "storage.js",
   "scripts": {
     "test": "_mocha",
@@ -21,6 +21,7 @@
     "chai": "^3.5.0",
     "codeclimate-test-reporter": "^0.3.1",
     "eslint": "^2.9.0",
+    "fakeredis": "^1.0.3",
     "istanbul": "^0.4.3",
     "jsdoc": "^3.4.0",
     "mocha": "^2.4.5",
