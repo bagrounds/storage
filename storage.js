@@ -40,6 +40,12 @@
    */
   function storage(options, callback){
 
+    if( ! options || ! options.action ) {
+
+      callback(null,SUPPORTED_ACTIONS);
+      return;
+    }
+
     var error = optionsAreInvalid(options);
 
     var action = options.action;

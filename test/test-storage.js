@@ -60,6 +60,16 @@
         });
       });
 
+      it('should return something if no options were specified', function(done){
+
+        storage({}, function(error, response) {
+
+          expect(error).to.not.be.ok;
+          expect(response).to.be.ok;
+          done();
+        });
+      });
+
       it('should return an error for invalid action', function (done) {
 
         options.action = 'foo';
