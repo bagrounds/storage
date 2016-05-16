@@ -204,6 +204,8 @@
     if(options.test){
 
       var redis = require('fakeredis');
+    } else {
+      redis = require('redis');
     }
 
     return redis.createClient(redisOptions);
