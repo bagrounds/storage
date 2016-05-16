@@ -11,6 +11,7 @@
    */
   var typeCheck = require('type-check').typeCheck;
   var _ = require('lodash');
+  var serialize = require('serialize-javascript');
 
   var redis = require('redis');
 
@@ -74,7 +75,7 @@
    * @typedef {Object} options contains all function parameters
    * @property {String} [action] get, set, or delete
    * @property {String} [key] identifier for value
-   * @property {String} [value] the value to set
+   * @property {*} [value] the value to set
    * @property {String} [host] host other than the default
    * @property {Number} [port] port other than the default
    * @property {Boolean} [test] use a fake redis client
@@ -87,6 +88,8 @@
    * @param {Function} callback handles results
    */
   function memorize(options,callback){
+
+    options.value = serialize(options.value);
 
     var redisClient = initializeRedisClient(options);
 
@@ -105,7 +108,12 @@
 
     var redisClient = initializeRedisClient(options);
 
-    redisClient.get(options.key, callback);
+    redisClient.get(options.key, function(error, response){
+
+      response = JSON.parse(response);
+
+      callback(error,response);
+    });
 
     redisClient.quit();
   }

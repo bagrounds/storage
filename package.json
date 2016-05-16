@@ -1,6 +1,6 @@
 {
   "name": "storage",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "main": "storage.js",
   "scripts": {
     "test": "_mocha",
@@ -15,6 +15,7 @@
   "dependencies": {
     "lodash": "^4.12.0",
     "redis": "^2.6.0-2",
+    "serialize-javascript": "^1.2.0",
     "type-check": "^0.3.2"
   },
   "devDependencies": {

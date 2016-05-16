@@ -18,12 +18,30 @@
   describe('storage', function () {
 
     var options;
+    var TEST_KEY;
+    var TEST_VALUE;
 
     beforeEach(function () {
 
+      TEST_KEY = 'a key';
+      TEST_VALUE = {
+        string: 'a string',
+        number: 42,
+        object: {
+          string: 'another string',
+          number: 43,
+          array: [1,2,3]
+        },
+        array: [
+          'string',
+          {},
+          ['a','b','c']
+        ]
+      };
+
       options = {
-        key: 'a key',
-        value: 'a value',
+        key: TEST_KEY,
+        value: TEST_VALUE,
         test: true
       };
     });
@@ -72,7 +90,7 @@
           storage(options, function(error, result) {
 
             expect(error).to.not.be.ok;
-            expect(result).to.equal(options.value);
+            expect(result).to.deep.equal(TEST_VALUE);
 
             options.action = 'delete';
 
@@ -120,7 +138,7 @@
         storage(options, function (error, result) {
 
           expect(error).to.not.be.ok;
-          expect(result).to.equal(options.value);
+          expect(result).to.deep.equal(TEST_VALUE);
 
           done();
         });
