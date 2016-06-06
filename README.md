@@ -5,23 +5,36 @@
 [![Coveralls][coveralls-img]][coveralls-url]
 [![Code Climate][codeclimate-img]][codeclimate-url]
 [![Code Climate][codeclimate-issues-img]][codeclimate-issues-url]
+[![js-standard-style][standard-img]][standard-url]
 
-A simple storage module backed by redis.
 
 ## Installation
 
 ``` bash
-  $ npm install 'github:bagrounds/storage'
+  $ npm install 'bagrounds/storage'
 ```
 
-## Usage
-...
+## [Documentation][gh-pages-url]
 
 
-## Run Tests
+## Tests
 ``` bash
   $ npm test
 ```
+
+
+## [Changelog][changelog-url]
+
+## License
+[MIT][license-url]
+
+
+[changelog-url]: CHANGELOG.md
+
+[license-url]: LICENSE
+
+[standard-img]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
+[standard-url]: http://standardjs.com/
 
 [github-img]: https://img.shields.io/github/downloads/bagrounds/storage/total.svg
 [github-url]: https://github.com/bagrounds/storage
@@ -37,3 +50,5 @@ A simple storage module backed by redis.
 
 [codeclimate-issues-img]: https://codeclimate.com/github/bagrounds/storage/badges/issue_count.svg
 [codeclimate-issues-url]: https://codeclimate.com/github/bagrounds/storage/issues
+
+[gh-pages-url]: http://bagrounds.github.io/storage

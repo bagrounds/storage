@@ -1,16 +1,25 @@
 {
   "name": "storage",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "storage.js",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bagrounds/storage.git"
+  },
+  "license": "MIT",
   "scripts": {
+    "pretest": "npm run lint",
     "test": "_mocha",
-    "predocument": "rm -rf docs",
+    "predocument": "npm test && rm -rf docs",
     "document": "jsdoc --destination docs -c .jsdoc.json -r",
     "precoverage": "rm -rf coverage",
-    "coverage": "istanbul cover _mocha",
+    "coverage": "istanbul cover _mocha && cat ./coverage/lcov.info | coveralls",
     "postcoverage": "codeclimate-test-reporter < coverage/lcov.info",
-    "build": "npm run lint && npm run coverage && npm run document",
-    "lint": "eslint *.js lib/**/*.js test/**/*.js"
+    "build": "npm run coverage && npm run document",
+    "prelint": "standard-format -w",
+    "lint": "eslint --ignore-path .gitignore .",
+    "gh-pages": "gh-pages-deploy"
   },
   "dependencies": {
     "lodash": "^4.12.0",
@@ -21,11 +30,21 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "codeclimate-test-reporter": "^0.3.1",
+    "coveralls": "^2.11.9",
     "eslint": "^2.9.0",
-    "fakeredis": "^1.0.3",
+    "gh-pages-deploy": "^0.4.2",
     "istanbul": "^0.4.3",
     "jsdoc": "^3.4.0",
     "mocha": "^2.4.5",
-    "mocha-lcov-reporter": "^1.2.0"
+    "standard-format": "^2.2.1",
+    "fakeredis": "^1.0.3",
+  },
+  "gh-pages-deploy": {
+    "staticpath": "docs",
+    "prep": [
+      "document"
+    ],
+    "noprompt": false
   }
+
 }
