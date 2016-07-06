@@ -22,6 +22,7 @@
     "gh-pages": "gh-pages-deploy"
   },
   "dependencies": {
+    "knex": "^0.11.5",
     "lodash": "^4.12.0",
     "redis": "^2.6.0-2",
     "serialize-javascript": "^1.2.0",
@@ -37,7 +38,7 @@
     "jsdoc": "^3.4.0",
     "mocha": "^2.4.5",
     "standard-format": "^2.2.1",
-    "fakeredis": "^1.0.3",
+    "fakeredis": "^1.0.3"
   },
   "gh-pages-deploy": {
     "staticpath": "docs",
@@ -46,5 +47,4 @@
     ],
     "noprompt": false
   }
-
 }
